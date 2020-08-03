@@ -38,7 +38,7 @@ android {
         abortOnError false
     }
 
-    kotlinOptions{
+    kotlinOptions {
         jvmTarget = "1.8"
     }
 }
@@ -52,4 +52,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.2.1"
+
+    //application
+    implementation 'com.android.support:multidex:1.0.3'
+
+    /*type_face*/
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
 }
