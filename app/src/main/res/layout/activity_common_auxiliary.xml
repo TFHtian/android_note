@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".constraint_layout.CommonAuxiliaryActivity">
+
+    <!--基准线-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="First"
+            android:id="@+id/tv_first"
+            style="@style/alignmentTextStyle"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:text="Second"
+            android:id="@+id/tv_second"
+            android:textSize="@dimen/sp_20"
+            style="@style/alignmentTextStyle"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintStart_toEndOf="@+id/tv_first"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_first"/>
+
+        <TextView
+            android:text="Third"
+            android:id="@+id/tv_third"
+            android:textSize="@dimen/sp_25"
+            style="@style/alignmentTextStyle"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintStart_toEndOf="@+id/tv_second"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_second"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--辅助线  :可指定百分百或者具体数-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.66"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g2"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.75"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/dp_10"/>
+        <TextView
+            android:id="@+id/tv_one"
+            android:text="垂直辅助线前"
+            style="@style/guidelineTextStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/g1"/>
+        <TextView
+            android:text="垂直辅助线后"
+            style="@style/guidelineTextStyle"
+            android:background="@color/color_Blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/g1"/>
+        <TextView
+            android:text="居中垂直辅助线"
+            style="@style/guidelineTextStyle"
+            android:background="@color/color_Black"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toStartOf="@+id/g1"
+            app:layout_constraintStart_toEndOf="@+id/g1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_one"/>
+        <TextView
+            android:text="水平辅助线上"
+            style="@style/guidelineTextStyle"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/g2"/>
+        <TextView
+            android:id="@+id/tv_two"
+            android:text="水平辅助线下"
+            style="@style/guidelineTextStyle"
+            android:background="@color/color_Blue"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/g2"/>
+        <TextView
+            android:text="居中水平辅助线"
+            style="@style/guidelineTextStyle"
+            android:background="@color/color_Black"
+            app:layout_constraintBottom_toTopOf="@+id/g2"
+            app:layout_constraintTop_toBottomOf="@+id/g2"
+            app:layout_constraintStart_toEndOf="@+id/tv_two"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--屏障约束-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="测试A:"
+            android:id="@+id/tv_a"
+            android:textSize="@dimen/sp_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_Black"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_b"
+            android:text="测试比较长的B"
+            android:textSize="@dimen/sp_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_Black"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintLeft_toLeftOf="@id/tv_a"
+            app:layout_constraintTop_toBottomOf="@id/tv_a"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            app:barrierDirection="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_a,tv_b"/>
+
+        <TextView
+            android:text="屏障右侧"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_Black"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--spread：默认 表示在约束条件下的最大尺寸-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_a1"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_a2"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:text="宽为0dp中间View约束被拉伸"
+                android:layout_width="@dimen/dp_0"
+                style="@style/guidelineTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_a1"
+                app:layout_constraintEnd_toStartOf="@id/tv_a2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--wrap模式自适应大小，但不超过约束条件下的最大尺寸  WRAP_CONTENT，当内容较大时，会直接超过约束条件 0dp则不会-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_b1"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_b2"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:text="宽为0dp中间View约束被拉伸试试更长"
+                android:layout_width="@dimen/dp_0"
+                style="@style/guidelineTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_default="wrap"
+                app:layout_constraintStart_toEndOf="@id/tv_b1"
+                app:layout_constraintEnd_toStartOf="@id/tv_b2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--percent模式 以父布局的百分比作为自身的大小，即百分比布局-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_c1"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_c2"
+                android:text="第一个View"
+                style="@style/alignmentTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:text="宽为0dp中间View约束被拉伸试试更长"
+                android:layout_width="@dimen/dp_0"
+                style="@style/guidelineTextStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toEndOf="@id/tv_c1"
+                app:layout_constraintEnd_toStartOf="@id/tv_c2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

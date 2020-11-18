@@ -14,4 +14,37 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="alignmentTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_Green</item>
+        <item name="android:textColor">@color/color_White</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="guidelineTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_Red</item>
+        <item name="android:textColor">@color/color_White</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="flowTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_Blue</item>
+        <item name="android:textColor">@color/color_White</item>
+        <item name="android:paddingLeft">@dimen/dp_25</item>
+        <item name="android:paddingRight">@dimen/dp_25</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
+        <item name="android:paddingBottom">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

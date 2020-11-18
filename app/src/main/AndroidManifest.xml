@@ -13,41 +13,80 @@
 
         <!-- main界面 -->
         <activity android:name=".MainActivity" />
+
         <!-- 扔物线任务 基础自定义view界面 -->
         <activity
             android:name=".custom_view.PracticeViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
         <!-- rxjava_创建符相关界面 -->
         <activity
             android:name="com.android_note.rxjava_learn.CreateOperatorActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop" />
+
+        <!-- rxjava 转换操作符相关界面 -->
+        <activity
+            android:name="com.android_note.rxjava_learn.TransformationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- rxjava 过滤操作符相关界面 -->
+        <activity
+            android:name="com.android_note.rxjava_learn.FilterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- rxjava 组合操作符相关界面 -->
+        <activity
+            android:name="com.android_note.rxjava_learn.CombinationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- 约束布局基础对齐 -->
+        <activity
+            android:name=".constraint_layout.CommonAlignmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- 约束链式 -->
+        <activity
+            android:name=".constraint_layout.CommonChainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- 约束布局辅助相关 -->
+        <activity
+            android:name=".constraint_layout.CommonAuxiliaryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!-- 约束布局 ： 流式链式布局 -->
+        <activity
+            android:name=".constraint_layout.CommonFlowActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <!--flexbox伸缩布局-->
+        <activity
+            android:name=".flex_box.FlexBoxGroupActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+        
+        <!--伸缩布局列表-->
+        <activity
+            android:name=".flex_box.FlexBoxRecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- rxjava 转换操作符相关界面 -->
-        <activity
-            android:name="com.android_note.rxjava_learn.TransformationActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop" />
-        <!-- rxjava 过滤操作符相关界面 -->
-        <activity
-            android:name="com.android_note.rxjava_learn.FilterActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop"/>
-        <!-- rxjava 组合操作符相关界面 -->
-        <activity
-            android:name="com.android_note.rxjava_learn.CombinationActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-
-        </activity>
-
+        <activity android:name="com.android_note.util_code.fragment_util.FragmentUtilActivity" />
     </application>
 
 </manifest>
