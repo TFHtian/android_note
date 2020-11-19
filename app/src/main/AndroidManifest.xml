@@ -12,7 +12,10 @@
         android:theme="@style/AppTheme">
 
         <!-- main界面 -->
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
 
         <!-- 扔物线任务 基础自定义view界面 -->
         <activity
@@ -74,10 +77,22 @@
             android:name=".flex_box.FlexBoxGroupActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
-        
+
         <!--伸缩布局列表-->
         <activity
             android:name=".flex_box.FlexBoxRecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--fragment_util使用-->
+        <activity
+            android:name="com.android_note.util_code.fragment_util.FragmentUtilActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--集合相关-->
+        <activity
+            android:name="com.android_note.util_code.collection_util.CollectionUtilsTest"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
@@ -86,7 +101,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.android_note.util_code.fragment_util.FragmentUtilActivity" />
+
     </application>
 
 </manifest>

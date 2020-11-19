@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80">
+        <Button
+            android:text="Add"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/btn_add"
+            android:textSize="@dimen/sp_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_orange"
+            android:background="@color/color_White"/>
+        <Button
+            android:text="Replace"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/btn_replace"
+            android:textSize="@dimen/sp_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_orange"
+            android:background="@color/color_White"/>
+    </LinearLayout>
+
+</LinearLayout>
