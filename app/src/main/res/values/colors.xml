@@ -6,6 +6,7 @@
 
     <color name="colorBg">#f8f8f8</color>
 
+    <color name="transparent">#00000000</color>
     <color name="color_Black">#000000</color>
     <color name="color_White">#ffffff</color>
     <color name="color_Red">#cf2929</color>

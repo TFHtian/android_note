@@ -94,6 +94,12 @@
         <activity
             android:name="com.android_note.util_code.collection_util.CollectionUtilsTest"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--span样式展示-->
+        <activity
+            android:name="com.android_note.util_code.span_util.SpanUtilActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
