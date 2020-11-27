@@ -100,6 +100,18 @@
         <activity
             android:name="com.android_note.util_code.span_util.SpanUtilActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--补间动画-->
+        <activity
+            android:name=".animation.view_animation.CommonViewAnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--补间动画popup场景-->
+        <activity
+            android:name=".animation.view_animation.PopupLayoutAnimActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
