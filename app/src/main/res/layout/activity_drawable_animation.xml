@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:text="Start"
+        android:gravity="center"
+        android:id="@+id/btn_start"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_Blue"
+        android:textColor="@color/color_White"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stop"/>
+
+    <Button
+        android:text="Stop"
+        android:gravity="center"
+        android:id="@+id/btn_stop"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_Blue"
+        android:textColor="@color/color_White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_start"
+        app:layout_constraintStart_toEndOf="@+id/btn_start"/>
+
+    <ImageView
+        android:id="@+id/im_anim"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_250"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/drawable_run"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

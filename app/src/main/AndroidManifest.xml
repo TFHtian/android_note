@@ -112,6 +112,12 @@
         <activity
             android:name=".animation.view_animation.PopupLayoutAnimActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--帧动画-->
+        <activity
+            android:name=".animation.drawable_animation.DrawableAnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
