@@ -118,6 +118,24 @@
         <activity
             android:name=".animation.drawable_animation.DrawableAnimationActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--属性动画-->
+        <activity
+            android:name=".animation.property_animation.PropertyAnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--object属性动画-->
+        <activity
+            android:name=".animation.property_animation.ObjectAnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--value属性动画-->
+        <activity
+            android:name=".animation.property_animation.ValueAnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
