@@ -136,6 +136,24 @@
         <activity
             android:name=".animation.property_animation.ValueAnimationActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--转场动画-->
+        <activity
+            android:name=".animation.transition_animation.CustomTransitionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--转场动画-->
+        <activity
+            android:name=".animation.transition_animation.TransitionDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--元素共享，转场动画-->
+        <activity
+            android:name=".animation.transition_animation.ShareElementActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -18,4 +18,12 @@
     <string name="bottom_fragment_second">Fragment2</string>
     <string name="bottom_fragment_third">Fragment3</string>
 
+    <!--transition-->
+    <string name="transition_list">Transition List</string>
+    <string name="transition_detail">Transition Detail</string>
+    <string name="share_element">Share Element</string>
+    <string name="share_element_im_cover">share element cover</string>
+    <string name="share_element_im_header">share element header</string>
+    <string name="share_element_tv_info">share element tv info</string>
+
 </resources>
