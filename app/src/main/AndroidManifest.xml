@@ -154,6 +154,36 @@
         <activity
             android:name=".animation.transition_animation.ShareElementActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--转场动画库应用-->
+        <activity
+            android:name=".animation.transition_animation.TransitionEveryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--线程锁相关-->
+        <activity
+            android:name=".android_thread.CustomLockActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--开启线程-->
+        <activity
+            android:name=".android_thread.CustomThreadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--线程间通信-->
+        <activity
+            android:name=".android_thread.ThreadCommunicationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--线程同步机制-->
+        <activity
+            android:name=".android_thread.ThreadSynchronizedActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

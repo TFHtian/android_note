@@ -21,6 +21,7 @@
     <!--transition-->
     <string name="transition_list">Transition List</string>
     <string name="transition_detail">Transition Detail</string>
+    <string name="transition_every">Transition Every</string>
     <string name="share_element">Share Element</string>
     <string name="share_element_im_cover">share element cover</string>
     <string name="share_element_im_header">share element header</string>
