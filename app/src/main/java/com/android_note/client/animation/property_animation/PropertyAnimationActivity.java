@@ -12,6 +12,13 @@ import com.android_note.client.R;
 
 /**
  * 详解：https://juejin.cn/post/6844903908356128775
+ * view动画（补间动画，逐帧动画）：
+ *      1.只能作用在view视图上 （若只改变颜色动画，即修改的是属性，而非整个视图view）
+ *      2.只改变视觉效果，没有改变属性：如view平移之后，只是效果在结束为止，本身还在初始位置，即点击结束位置无效
+ *      3.除了本身4种类型效果外的动画。无法实现，单一性
+ *
+ * 属性动画 ；任意java对象
+ *       实质：在一定时间间隔内，通过不断对值进行改变，不断将值赋给对象属性，实现对象属性上动画
  */
 
 public class PropertyAnimationActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,7 +47,13 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
     }
 
     /**
-     * 属性动画
+     * 属性动画：实现步骤
+     * 第一步：设置动画运行时长，动画效果对应属性的初始值和结束值
+     * 第二步：设置初始值 过度到 结束值的变化逻辑 （应用到辅助类 估值器和插值器）
+     * 第三步：根据变化逻辑 不断改变值
+     * 第四步：值改变一次就给对象属性赋值一次
+     * 第五步：每次赋值调用invalidate 不断刷新视图 (即调用onDraw 重新绘制视图)
+     * end：  不断循环到初始值等于结束值
      */
     private void customAnim(){
         // 步骤1：设置属性数值的初始值 & 结束值

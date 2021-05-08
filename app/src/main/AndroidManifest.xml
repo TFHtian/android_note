@@ -3,7 +3,7 @@
     package="com.android_note.client">
 
     <application
-        android:name=".app.BaseApplication"
+        android:name="com.android_note.app.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -142,7 +142,9 @@
         <activity
             android:name=".animation.transition_animation.CustomTransitionActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop">
+
+        </activity>
 
         <!--转场动画-->
         <activity
@@ -159,6 +161,36 @@
         <!--转场动画库应用-->
         <activity
             android:name=".animation.transition_animation.TransitionEveryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--materail场景动画主界面-->
+        <activity
+            android:name=".animation.transition_animation.material.TransitionMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--materail 界面切换动画界面1-->
+        <activity
+            android:name=".animation.transition_animation.material.Transition1Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--materail 界面切换动画界面2-->
+        <activity
+            android:name=".animation.transition_animation.material.Transition2Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--materail 界面切换动画界面3-->
+        <activity
+            android:name=".animation.transition_animation.material.Transition3Activity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
 
@@ -184,13 +216,7 @@
         <activity
             android:name=".android_thread.ThreadSynchronizedActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
     </application>
 

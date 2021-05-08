@@ -27,4 +27,14 @@
     <string name="share_element_im_header">share element header</string>
     <string name="share_element_tv_info">share element tv info</string>
 
+    <!--material_transition-->
+    <string name="transition_main">Transition Main</string>
+    <string name="transition_title">Transitions</string>
+    <string name="transition_text">This activity defines a Explode Enter Transition programmatically. Transitions can be defined either on code or on xml resource files</string>
+    <string name="medium_text">Porchetta landjaeger tail meatball t-bone spare ribs. Sirloin pork chop bacon pork belly strip steak. Porchetta ham meatball pig salami short ribs jowl spare ribs sirloin tongue jerky cupim chuck.</string>
+    <string name="reveal_body1">Circular Reveal Animation starting from the center of target view</string>
+    <string name="reveal_body2">Circular Reveal Animation starting from touch coordinates</string>
+    <string name="reveal_body3">View layout change animation with Circular Reveal Animation on finish</string>
+    <string name="reveal_body4">Circular Reveal Animation from top with nested animations on end</string>
+
 </resources>

@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android_note.client.R;
 
+/**
+ *  先改变值，然后 手动赋值 给对象的属性从而实现动画；是 间接 对对象属性进行操作；
+ *  关于数字的计算动画  :它不会与View直接交互，而是通过ValueAnimator#addUpdateListener来设置动画效果
+ */
 public class ValueAnimationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnCustom;

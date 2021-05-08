@@ -1,4 +1,4 @@
-package com.android_note.client.app;
+package com.android_note.app;
 
 import androidx.multidex.MultiDexApplication;
 

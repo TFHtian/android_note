@@ -14,6 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android_note.client.R;
 
+/**
+ * 先改变值，然后 自动赋值 给对象的属性从而实现动画；是 直接 对对象属性进行操作；
+ * 创建动画时的第一个传参是被动画对象View，第二个是properyName,第三个是变长参数的起始数值。
+ * 监听：
+ *      AnimatorListener ：监听的是属性动画的开始，结束，取消，重复。
+ *      AnimatorPauseListener ：监听的是属性动画的暂停，恢复状态。
+ *      AnimatorUpdateListener ：监听的是属性动画中值得变化。
+ */
+
 public class ObjectAnimationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnCommon;
@@ -103,6 +112,5 @@ public class ObjectAnimationActivity extends AppCompatActivity implements View.O
         animator.setDuration(5000);
         animator.start();
     }
-
 
 }
