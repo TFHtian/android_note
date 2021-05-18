@@ -72,6 +72,12 @@
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop" />
 
+        <!--约束布局：特殊重叠布局-->
+        <activity
+            android:name=".constraint_layout.CommonOverlapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop" />
+
         <!--flexbox伸缩布局-->
         <activity
             android:name=".flex_box.FlexBoxGroupActivity"
@@ -142,9 +148,7 @@
         <activity
             android:name=".animation.transition_animation.CustomTransitionActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-
-        </activity>
+            android:launchMode="singleTop"/>
 
         <!--转场动画-->
         <activity
@@ -191,6 +195,12 @@
         <!--materail 界面切换动画界面3-->
         <activity
             android:name=".animation.transition_animation.material.Transition3Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--materail 元素共享界面-->
+        <activity
+            android:name=".animation.transition_animation.material.SharedTransitionActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
 

@@ -7,12 +7,13 @@
         android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/color_Red"
         android:minHeight="?attr/actionBarSize"/>
 
     <LinearLayout
         android:padding="10dp"
         android:orientation="vertical"
+        android:background="#60cf2929"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

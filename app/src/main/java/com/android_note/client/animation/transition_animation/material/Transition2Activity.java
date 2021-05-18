@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
 import com.android_note.client.R;
+import com.gyf.immersionbar.ImmersionBar;
 
 /**
  * @author fenghui
@@ -25,6 +26,11 @@ public class Transition2Activity extends BaseTransitionActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition2);
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true)
+                .statusBarColor(R.color.color_Red)
+                .navigationBarColor(R.color.color_Red)
+                .init();
         initData();
         setupWindowAnimations();
         initView();

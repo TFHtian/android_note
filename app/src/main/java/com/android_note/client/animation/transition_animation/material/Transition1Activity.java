@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.android_note.client.R;
+import com.gyf.immersionbar.ImmersionBar;
 
 /**
  * @author fenghui
@@ -25,6 +26,11 @@ public class Transition1Activity extends BaseTransitionActivity implements View.
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition1);
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true)
+                .statusBarColor(R.color.color_Red)
+                .navigationBarColor(R.color.color_Red)
+                .init();
         setupWindowAnimations();
         initView();
     }
@@ -46,6 +52,9 @@ public class Transition1Activity extends BaseTransitionActivity implements View.
     private void setupWindowAnimations() {
         Visibility enterTransition = buildEnterTransition();
         getWindow().setEnterTransition(enterTransition);
+
+        getWindow().setReenterTransition(enterTransition);
+        getWindow().setExitTransition(enterTransition);
     }
 
     @Override
@@ -72,8 +81,13 @@ public class Transition1Activity extends BaseTransitionActivity implements View.
                 transitionTo(sle_i_xml);
                 break;
             case R.id.sample1_button5:
+                Visibility returnTransition = buildReturnTransition();
+                getWindow().setReturnTransition(returnTransition);
+
+                finishAfterTransition();
                 break;
             case R.id.sample1_button6:
+                finishAfterTransition();
                 break;
         }
     }
