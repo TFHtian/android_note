@@ -37,4 +37,21 @@
     <string name="reveal_body3">View layout change animation with Circular Reveal Animation on finish</string>
     <string name="reveal_body4">Circular Reveal Animation from top with nested animations on end</string>
 
+    <array name="list_scene_name">
+        <item>AutoTransition</item>
+        <item>ChangeBounds</item>
+        <item>ChangeClipBounds</item>
+        <item>ChangeScroll</item>
+        <item>ChangeTransform</item>
+        <item>Explode/Fade/Slide</item>
+        <item>Scene</item>
+    </array>
+    
+    <string name="auto_transition">Auto Transition</string>
+    <string name="begin">Begin</string>
+    <string name="move">Move</string>
+    <string name="toggle">Toggle</string>
+    <string name="change_scroll">Change Scroll</string>
+
+
 </resources>

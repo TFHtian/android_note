@@ -168,13 +168,7 @@
         <activity
             android:name=".animation.transition_animation.material.TransitionMainActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
         <!--materail 界面切换动画界面1-->
         <activity
@@ -193,6 +187,18 @@
             android:name=".animation.transition_animation.material.Transition3Activity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
+
+        <!--materail view 场景转换动画-->
+        <activity
+            android:name=".animation.transition_animation.material.MaterialAnimation1Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!--线程锁相关-->
         <activity
