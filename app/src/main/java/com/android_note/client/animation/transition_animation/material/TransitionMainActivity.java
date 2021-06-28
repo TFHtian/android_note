@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.transition.Slide;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
 
 import com.android_note.client.R;
+import com.gyf.immersionbar.ImmersionBar;
 
 /**
  * @author fenghui
@@ -47,10 +49,17 @@ import com.android_note.client.R;
 
 public class TransitionMainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ImageView ivShare;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition_main);
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true)
+                .statusBarColor(R.color.color_White)
+                .navigationBarColor(R.color.color_White)
+                .init();
         setupWindowAnimations();
         initView();
     }
@@ -61,6 +70,7 @@ public class TransitionMainActivity extends AppCompatActivity implements View.On
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
+        ivShare =findViewById(R.id.iv_share);
         findViewById(R.id.ll_transitions).setOnClickListener(this);
         findViewById(R.id.ll_shared).setOnClickListener(this);
         findViewById(R.id.ll_view).setOnClickListener(this);
@@ -86,6 +96,7 @@ public class TransitionMainActivity extends AppCompatActivity implements View.On
                 toStartActivity(Transition1Activity.class,pairs,"Transitions");
                 break;
             case R.id.ll_shared:
+                transitionToActivity(SharedTransitionActivity.class,R.string.share_element_im_icon);
                 break;
             case R.id.ll_view:
                 break;
@@ -100,6 +111,12 @@ public class TransitionMainActivity extends AppCompatActivity implements View.On
         ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(TransitionMainActivity.this, pairs);
         i.putExtra("type", type);
         startActivity(i, transitionActivityOptions.toBundle());
+    }
+
+    private void transitionToActivity(Class target, int transitionName) {
+        final Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(TransitionMainActivity.this, false,
+                new Pair<>(ivShare, getResources().getString(transitionName)));
+        toStartActivity(target, pairs, "Shared");
     }
 
 }
