@@ -22,7 +22,18 @@
             android:name=".custom_view.PracticeViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".custom_view.CustomCircleActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!-- rxjava_创建符相关界面 -->
         <activity
@@ -202,13 +213,7 @@
         <activity
             android:name=".animation.transition_animation.material.MaterialAnimation1Activity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
         <!--线程锁相关-->
         <activity

@@ -15,6 +15,14 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 自定义三步：绘制，布局，触摸反馈
+ * 绘制：即重写onDraw()方法 ： 绘制关键：使用辅助类canvas 参数paint
+ *
+ * canvas.DrawXXX().绘制内容
+ * paint》绘制出不同风格
+ * 绘制顺序控制
+ */
 public class PracticeViewActivity extends AppCompatActivity {
 
     List<PageModel> pageModels = new ArrayList<>();

@@ -53,4 +53,8 @@
         <item name="android:windowExitAnimation">@anim/animation_popup_exit</item>
     </style>
 
+    <declare-styleable name="CustomCircleView">
+        <attr name="circle_color" format="color"/>
+    </declare-styleable>
+
 </resources>
