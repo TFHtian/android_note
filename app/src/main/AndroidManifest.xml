@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android_note.client">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name="com.android_note.app.BaseApplication"
         android:allowBackup="true"
@@ -27,13 +32,7 @@
         <activity
             android:name=".custom_view.CustomCircleActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
         <!-- rxjava_创建符相关界面 -->
         <activity
@@ -238,6 +237,26 @@
             android:name=".android_thread.ThreadSynchronizedActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
+
+        <!--io流处理文件读写-->
+        <activity
+            android:name="com.android_note.io.CustomFileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--组件服务service-->
+        <activity
+            android:name="com.android_note.service.CustomServiceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.android_note.service.SimpleService"/>
+        <service android:name="com.android_note.service.CustomService"/>
 
     </application>
 
