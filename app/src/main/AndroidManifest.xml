@@ -248,6 +248,14 @@
         <activity
             android:name="com.android_note.service.CustomServiceActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+        <service android:name="com.android_note.service.SimpleService"/>
+        <service android:name="com.android_note.service.CustomService"/>
+
+        <!--组件广播使用-->
+        <activity
+            android:name="com.android_note.broadcast.CommonBroadcastActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -255,8 +263,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.android_note.service.SimpleService"/>
-        <service android:name="com.android_note.service.CustomService"/>
 
     </application>
 
