@@ -332,7 +332,7 @@ public class FileDirUtil {
         String[] paths = new String[0];
         StorageManager sm = (StorageManager)BaseApplication.getInstance().getSystemService(Context.STORAGE_SERVICE);
         try {
-            paths = (String[]) sm.getClass().getMethod("getVolumePaths", null).invoke(sm, null);
+            paths = (String[]) sm.getClass().getMethod("getVolumePaths", (Class<?>) null).invoke(sm, (Object) null);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {

@@ -256,6 +256,18 @@
         <activity
             android:name="com.android_note.broadcast.CommonBroadcastActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--建造者模式-->
+        <activity
+            android:name="com.android_note.design_pattern.builder_pattern.BuilderPatternActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--工厂方法模式-->
+        <activity
+            android:name="com.android_note.design_pattern.factory_pattern.method_factory.FactoryMethodActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -263,6 +275,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--简单工厂模式-->
+        <activity
+            android:name="com.android_note.design_pattern.factory_pattern.simple_factory.SimpleFactoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
 
     </application>
 
