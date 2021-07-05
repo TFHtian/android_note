@@ -26,7 +26,12 @@ public class FactoryMethodActivity extends AppCompatActivity {
     }
 
     private void initView() {
-
+        findViewById(R.id.btn).setOnClickListener(v -> {
+            ComputerFactory cpu_factory = new CpuFactory();
+            cpu_factory.getProduct().create();
+            ComputerFactory disk_factory = new DiskFactory();
+            disk_factory.getProduct().create();
+        });
     }
 
 }
