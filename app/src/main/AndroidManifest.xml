@@ -280,6 +280,18 @@
         <activity
             android:name="com.android_note.design_pattern.factory_pattern.abstract_factory.AbstractFactoryActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--单例模式-->
+        <activity
+            android:name="com.android_note.design_pattern.singleton_pattern.SingletonActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--适配器模式-->
+        <activity
+            android:name="com.android_note.design_pattern.adapter_pattern.AdapterPatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
