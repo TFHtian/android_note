@@ -316,6 +316,12 @@
         <activity
             android:name="com.android_note.design_pattern.template_pattern.TemplatePatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--外观模式-->
+        <activity
+            android:name="com.android_note.design_pattern.facade_pattern.FacadePatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
