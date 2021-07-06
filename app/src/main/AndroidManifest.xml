@@ -304,6 +304,12 @@
         <activity
             android:name="com.android_note.design_pattern.strategy_pattern.StrategyPatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--责任链接模式-->
+        <activity
+            android:name="com.android_note.design_pattern.chain_pattern.ChainPatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
