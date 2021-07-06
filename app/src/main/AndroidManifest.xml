@@ -298,6 +298,12 @@
         <activity
             android:name="com.android_note.design_pattern.observer_pattern.ObserverPatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--策略模式-->
+        <activity
+            android:name="com.android_note.design_pattern.strategy_pattern.StrategyPatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
