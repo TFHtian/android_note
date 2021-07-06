@@ -292,6 +292,12 @@
         <activity
             android:name="com.android_note.design_pattern.adapter_pattern.AdapterPatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--观察者模式-->
+        <activity
+            android:name="com.android_note.design_pattern.observer_pattern.ObserverPatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
