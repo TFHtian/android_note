@@ -334,6 +334,12 @@
         <activity
             android:name="com.android_note.kotlin.CustomKotlinActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--kotlin 基础应用-->
+        <activity
+            android:name="com.android_note.kotlin.CommonKotlinActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
