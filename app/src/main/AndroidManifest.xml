@@ -328,6 +328,12 @@
         <activity
             android:name="com.android_note.design_pattern.decorator_pattern.DecoratorPatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--kotlin 基础相关-->
+        <activity
+            android:name="com.android_note.kotlin.CustomKotlinActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
