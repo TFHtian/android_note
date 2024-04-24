@@ -304,7 +304,13 @@
         <activity
             android:name="com.android_note.design_pattern.strategy_pattern.StrategyPatternActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!--责任链接模式-->
         <activity
@@ -340,13 +346,7 @@
         <activity
             android:name="com.android_note.kotlin.CommonKotlinActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
     </application>
 

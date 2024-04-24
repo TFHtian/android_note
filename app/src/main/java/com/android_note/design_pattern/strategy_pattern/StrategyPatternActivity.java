@@ -35,6 +35,12 @@ public class StrategyPatternActivity extends AppCompatActivity {
             Double discountAmount = context.discountAmount(mapReq, 100D);
             System.out.println("支付金额："+discountAmount);
         });
+
+        findViewById(R.id.btn2).setOnClickListener(v -> {
+            //IPay pay = PayFactory.getMethod("WECHAT_PAY");
+            IPay pay = PayFactory.create(WeChatPay.class);
+            pay.pay("",400D);
+        });
     }
 
 }
