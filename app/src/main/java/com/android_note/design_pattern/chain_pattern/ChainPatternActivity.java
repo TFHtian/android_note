@@ -8,13 +8,13 @@ import com.android_note.client.R;
 
 /**
  * 责任裂解模式 ：
- *                   使多个对象都有机会处理请求，从而避免请求的发送者和接受者之间的耦合关系
- *
+ * 使多个对象都有机会处理请求，从而避免请求的发送者和接受者之间的耦合关系
+ * <p>
  * 组成内容：
- *              Handler（抽象处理者）：定义了处理请求的接口或抽象类，提供了处理请求的方法和设置下一个处理者的方法。
- *              ConcreteHandler（具体处理者）：具体处理者接受到请求后，可以选择立即处理这个请求或者将请求传递给下家。由于具体处理者持有对下家的引用，因此，如果需要，具体处理者可以访问下家。
- *
- *  案例：层层审批
+ * Handler（抽象处理者）：定义了处理请求的接口或抽象类，提供了处理请求的方法和设置下一个处理者的方法。
+ * ConcreteHandler（具体处理者）：具体处理者接受到请求后，可以选择立即处理这个请求或者将请求传递给下家。由于具体处理者持有对下家的引用，因此，如果需要，具体处理者可以访问下家。
+ * <p>
+ * 案例：层层审批
  */
 public class ChainPatternActivity extends AppCompatActivity {
 
@@ -41,6 +41,18 @@ public class ChainPatternActivity extends AppCompatActivity {
             // 请假10天
             directLeader.handleRequest(10);
         });
+
+        findViewById(R.id.btn2).setOnClickListener(v -> {
+            // 责任链模式 + 建造者模式
+            AbstractHandler.Builder<Number> builder = new AbstractHandler.Builder<>();
+            builder.addHandler(new PMHandler())
+                    .addHandler(new PDHandler())
+                    .addHandler(new BossHandler())
+                    .addHandler(new FinanceHandler())
+                    .build()
+                    .doHandler(null);
+        });
+
     }
 
 }
