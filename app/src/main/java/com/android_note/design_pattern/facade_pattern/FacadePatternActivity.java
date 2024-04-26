@@ -23,6 +23,8 @@ public class FacadePatternActivity extends AppCompatActivity {
             AiFacade facade = new AiFacade();
             facade.on();
             facade.off();
+            ShapeMaker shapeMaker = new ShapeMaker();
+            shapeMaker.drawCircle();
         });
     }
 

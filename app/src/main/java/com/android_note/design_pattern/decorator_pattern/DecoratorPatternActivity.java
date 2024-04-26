@@ -22,10 +22,13 @@ public class DecoratorPatternActivity extends AppCompatActivity {
 
     private void initView() {
         findViewById(R.id.btn).setOnClickListener(v -> {
-
             Coffee mocha = new Mocha();
             mocha = new Milk(mocha);
             System.out.println(mocha.getDescription() + "$" + mocha.cost());
+
+            Shape circle = new Circle();
+            ShapeDecorator redCircle = new RedShapeDecorator(new Circle());
+            ShapeDecorator redRectangle = new RedShapeDecorator(new Rectangle());
         });
     }
 
