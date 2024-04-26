@@ -336,8 +336,15 @@
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
 
+        <!--组合模式-->
         <activity
             android:name="com.android_note.design_pattern.composite_pattern.CompositePatternActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <!--代理模式-->
+        <activity
+            android:name="com.android_note.design_pattern.proxy_pattern.ProxyPatternActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
