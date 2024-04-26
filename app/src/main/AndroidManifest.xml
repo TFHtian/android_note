@@ -334,6 +334,11 @@
         <activity
             android:name="com.android_note.design_pattern.state_pattern.StatePatternActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:name="com.android_note.design_pattern.composite_pattern.CompositePatternActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
