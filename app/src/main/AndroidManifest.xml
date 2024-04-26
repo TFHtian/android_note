@@ -310,13 +310,7 @@
         <activity
             android:name="com.android_note.design_pattern.chain_pattern.ChainPatternActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"/>
 
         <!--模板模式-->
         <activity
@@ -335,6 +329,18 @@
             android:name="com.android_note.design_pattern.decorator_pattern.DecoratorPatternActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTop"/>
+
+        <!--状态模式-->
+        <activity
+            android:name="com.android_note.design_pattern.state_pattern.StatePatternActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <!--kotlin 基础相关-->
         <activity

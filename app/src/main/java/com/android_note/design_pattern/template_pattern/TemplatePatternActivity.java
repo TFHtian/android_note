@@ -31,6 +31,13 @@ public class TemplatePatternActivity extends AppCompatActivity {
             CodeBicycle codeBicycle = new CodeBicycle();
             scanBicycle.isNeedUnlock(true);
             codeBicycle.use();
+
+            BossWork bossWork = new BossWork();
+            StaffWork staffWork = new StaffWork();
+            bossWork.newDay();
+            System.out.println("====================");
+            staffWork.newDay();
+
         });
     }
 
